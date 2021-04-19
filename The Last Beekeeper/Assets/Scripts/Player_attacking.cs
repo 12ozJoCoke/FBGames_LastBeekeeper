@@ -15,8 +15,9 @@ public class Player_attacking : MonoBehaviour
     float scrollSensitivity = 0.1f;
     public Image uiIndication_Melee, uiIndication_Shooting;
     public GameObject bulletPrefab, meleeParticlesPrefab, meleeAttackPrefab;
+    Player_PointsManager ppm;
 
-    public int meleeDamage, bulletDamage;
+    public int meleeDamage, bulletDamage, pointsPerEnemyMeleeHit, pointsPerEnemyBulletHit;
 
     public float gun_FiringRate_RPM, gun_FiringTimer, melee_PunchingRate, bulletLife, bulletForce, bullet_spawn_forwardoffset, meleeRange, bullet_Diversion, max_Bullet_SpreadForce;
     float gun_FiringRate_SPR, melee_PunchingRate_SPR;
@@ -34,6 +35,8 @@ public class Player_attacking : MonoBehaviour
 
         melee_PunchingRate_SPR = melee_PunchingRate / 60;
         melee_PunchingRate_SPR = 1 / melee_PunchingRate_SPR;
+
+        ppm = GetComponent<Player_PointsManager>();
     }
 
     // Update is called once per frame
@@ -140,6 +143,8 @@ public class Player_attacking : MonoBehaviour
         if (newbullet.GetComponent<BulletScript>())
         {
             newbullet.GetComponent<BulletScript>().damageOutput = bulletDamage;
+            newbullet.GetComponent<BulletScript>().ppm = ppm;
+            newbullet.GetComponent<BulletScript>().pointsPerEnemyBulletHit = pointsPerEnemyBulletHit;
         }
 
         Destroy(newbullet, life);
@@ -159,6 +164,7 @@ public class Player_attacking : MonoBehaviour
                 {
                     GameObject enemyobject = hit.collider.gameObject;
                     enemyobject.GetComponent<Enemy_Health>().TakeDamage(meleeDamage, "Melee", hitpos);
+                    ppm.AddPoints(pointsPerEnemyMeleeHit);
                 }
             }
         }

@@ -11,7 +11,7 @@ public class AllSpawners_Manager : MonoBehaviour
     public int maxEnemiesInScene, waveNumber, enemiesPerWave, spawnedEnemiesInWave;
     public Text waveCounter_UI;
     public Color defaultTextColor, waveReadyTextColor;
-    public bool canSpawn, proceedWave;
+    public bool canSpawn, proceedWave, completedWave;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,7 @@ public class AllSpawners_Manager : MonoBehaviour
 
         if (spawnedEnemiesInWave >= enemiesPerWave)
         {
+            completedWave = false;
             canSpawn = false;
         }
 
@@ -54,6 +55,10 @@ public class AllSpawners_Manager : MonoBehaviour
             waveCounter_UI.color = defaultTextColor;
         }else if (spawnedEnemiesInWave == enemiesPerWave && allEnemies.Count == 0 && !proceedWave)
         {
+            if (!completedWave)
+            {
+                completedWave = true;
+            }
             waveCounter_UI.color = waveReadyTextColor;
         }
 

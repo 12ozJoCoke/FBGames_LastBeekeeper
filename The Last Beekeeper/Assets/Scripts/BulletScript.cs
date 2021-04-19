@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public int damageOutput;
+    public int damageOutput, pointsPerEnemyBulletHit;
+    public Player_PointsManager ppm;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,11 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            if (ppm)
+            {
+                ppm.AddPoints(pointsPerEnemyBulletHit);
+            }
+
             collision.gameObject.GetComponent<Enemy_Health>().TakeDamage(damageOutput, "Bullet", transform.position);
             Destroy(gameObject);
         }

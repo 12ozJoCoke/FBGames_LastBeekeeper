@@ -106,6 +106,7 @@ public class Turret_Shooting : MonoBehaviour
         AudioSource tempas = new GameObject().AddComponent<AudioSource>();
         tempas.transform.position = transform.position;
         tempas.clip = sfx;
+        tempas.volume = 0.25f;
         float lifetime = sfx.length;
         tempas.Play();
         Destroy(tempas.gameObject, lifetime);

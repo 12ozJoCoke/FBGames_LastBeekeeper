@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 6d1d7b13b9210b743a598f1f377e885a,
     type: 3}
-  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_Color: {r: 0.27042544, g: 0.32580164, b: 0.5566038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   bulletLife: 5
   bulletForce: 1000
   bullet_spawn_forwardoffset: 0.6
-  meleeRange: 2
+  meleeRange: 3
   bullet_Diversion: 0.3
   max_Bullet_SpreadForce: 125
   shootingSFX: {fileID: 8300000, guid: d8e23fd59a62c6e4b86addb78299716e, type: 3}

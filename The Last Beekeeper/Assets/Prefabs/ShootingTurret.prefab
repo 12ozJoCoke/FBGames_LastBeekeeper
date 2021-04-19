@@ -124,7 +124,7 @@ MonoBehaviour:
     type: 3}
   meleeAttackPrefab: {fileID: 4770958937465669001, guid: 38dbe9449d894d44c87474a1e53dd19f,
     type: 3}
-  gun_FiringRate_RPM: 350
+  gun_FiringRate_RPM: 250
   gun_FiringTimer: 0
   melee_PunchingRate: 100
   bulletLife: 5
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 6d1d7b13b9210b743a598f1f377e885a,
     type: 3}
-  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_Color: {r: 0.5943396, g: 0.2943663, b: 0.2943663, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
