@@ -1771,6 +1771,7 @@ GameObject:
   - component: {fileID: 1037217855}
   - component: {fileID: 1037217856}
   - component: {fileID: 1037217857}
+  - component: {fileID: 1037217858}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -1858,6 +1859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingSpeed: 5
   runningSpeed: 8
+  movementOverride: 0
+  canInteract: 0
 --- !u!50 &1037217854
 Rigidbody2D:
   serializedVersion: 4
@@ -1963,6 +1966,22 @@ MonoBehaviour:
   healthbarPrefab: {fileID: 2127219988734549413, guid: bbb2c57ae3dcf0741999b3b3cbdee2cc,
     type: 3}
   camerashake: {fileID: 519420033}
+--- !u!114 &1037217858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037217850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fa673d3030cf445b7d0671e031e023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BarrierAmount: 5
+  MaxAmount: 5
+  BarrierPre: {fileID: 4742334615330875729, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+    type: 3}
 --- !u!1 &1137246763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,7 +2462,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 78486027d2a30d3468c8e07d99ff933c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -56267,3 +56286,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057632268}
   m_CullTransparentMesh: 0
+--- !u!1001 &4742334614462891647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875724, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742334615330875729, guid: 70b3bd961b0fc6f4fa087a3f64e60b79,
+        type: 3}
+      propertyPath: m_Name
+      value: Round barrier
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 70b3bd961b0fc6f4fa087a3f64e60b79, type: 3}
