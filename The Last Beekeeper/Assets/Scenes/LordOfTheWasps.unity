@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraForwardOffset: 2
   cameraLerpSpeed: 4
-  objectToFollow: {fileID: 0}
+  objectToFollow: {fileID: 5650667997775948808}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
