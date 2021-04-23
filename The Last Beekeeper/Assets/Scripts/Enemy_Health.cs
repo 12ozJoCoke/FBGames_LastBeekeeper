@@ -16,7 +16,6 @@ public class Enemy_Health : MonoBehaviour
         
         dead = false;
         currentHealth = maxHealth;
-        SpawnHealthBar(gameObject.name);
     }
 
     // Update is called once per frame
