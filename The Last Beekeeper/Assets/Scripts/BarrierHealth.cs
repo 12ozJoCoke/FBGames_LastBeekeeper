@@ -21,18 +21,18 @@ public class BarrierHealth : MonoBehaviour
     void Update()
     {
         
-
         
         if (!youstilltakeadamage)
         {
             if (timeyboi < nodamage)
             {
                 timeyboi += Time.deltaTime;
+                youstilltakeadamage = false;
             }
             else if(timeyboi >= nodamage)
             {
                 timeyboi = 0;
-                youstilltakeadamage = false;
+                youstilltakeadamage = true;
             }
         }
         
@@ -51,5 +51,10 @@ public class BarrierHealth : MonoBehaviour
             BarrierHp--;
             youstilltakeadamage = false;
         }
+    }
+
+    public void Spawnadabar()
+    {
+        
     }
 }
