@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4803453819852861123}
   - component: {fileID: 1484776029}
   m_Layer: 0
-  m_Name: Spike
+  m_Name: MeleeSpike
   m_TagString: NoBarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +101,11 @@ MonoBehaviour:
   timer: 0
   damage: 20
   CanDoDamage: 1
+  meleedmg: 0
+  rangedmg: 0
+  durabillity: 0
+  MaxDura: 25
+  usage: 1
 --- !u!61 &4803453819852861123
 BoxCollider2D:
   m_ObjectHideFlags: 0

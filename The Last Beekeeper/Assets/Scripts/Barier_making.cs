@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Barier_making : MonoBehaviour
 {
     public int BarrierAmount, MaxAmount;
     public GameObject BarrierPre;
     public int SpikeAmount, MaxSpikeAmount;
-    public GameObject SpikePre;
+    public GameObject MeleeSpike, RangeSpike, AllSpike;
     private GameObject Player;
     public bool CanPlace;
+    public bool MSpike, RSpike, ASpike;
+    Player_PointsManager ppm;
+    public Text text;
     void Start()
     {
         Player = gameObject;
@@ -27,7 +31,7 @@ public class Barier_making : MonoBehaviour
         {
             BarrierAmount = 0;
         }
-
+        text.text = BarrierAmount + "/" + MaxAmount + " :Barriers" + " " + SpikeAmount + "/" + MaxSpikeAmount + " :Spikes";
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (BarrierAmount > 0 && !!CanPlace)
@@ -56,11 +60,43 @@ public class Barier_making : MonoBehaviour
             SpikeAmount = 0;
         }
 
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            MSpike = true;
+            RSpike = false;
+            ASpike = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            MSpike = false;
+            RSpike = true;
+            ASpike = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            MSpike = false;
+            RSpike = false;
+            ASpike = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (SpikeAmount > 0 && !!CanPlace)
             {
-                Instantiate(SpikePre, transform.position, Quaternion.identity);
+                if (MSpike)
+                {
+                    Instantiate(MeleeSpike, transform.position, Quaternion.identity);
+                }
+                else if (RSpike)
+                {
+                    Instantiate(RangeSpike, transform.position, Quaternion.identity);
+                }
+                else if (AllSpike)
+                {
+                    Instantiate(AllSpike, transform.position, Quaternion.identity);
+                }
 
                 SpikeAmount--;
             }
@@ -91,5 +127,39 @@ public class Barier_making : MonoBehaviour
             CanPlace = true;
         }
     }
-    
+
+    void OnCollisionStay2D(Collision2D pbt)
+    {
+        if (pbt.gameObject.tag == "NoBarrier")
+        {
+            CanPlace = false;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D pbt2)
+    {
+        if (pbt2.gameObject.tag == "NoBarrier")
+        {
+            CanPlace = true;
+        }
+        
+    }
+
+    public void BuyBarrier(int pointsspend)
+    {
+        if (ppm.currentPoints >= pointsspend)
+        {
+            ppm.RemovePoints(pointsspend);
+            BarrierAmount++;
+        }
+    }
+    public void BuySpike(int pointsspend)
+    {
+        if (ppm.currentPoints >= pointsspend)
+        {
+            ppm.RemovePoints(pointsspend);
+            SpikeAmount++;
+        }
+    }
+
 }

@@ -71,5 +71,18 @@ public class Player_health : MonoBehaviour
             health--;
             cantakedamage = false;
         }
+
+        
     }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "AllSpike" && cantakedamage)
+        {
+            health--;
+            cantakedamage = false;
+        }
+    }
+
+
 }
