@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class player_running : MonoBehaviour
 {
-    public float walkingSpeed, runningSpeed;
+    public float walkingSpeed, runningSpeed, baseRunningSpeed, baseWalkingSpeed;
+    public float walkSpeedBoosts, runSpeedBoosts;
+    float walkSpeedBoostPerBoost, runSpeedBoostPerBoost;
     Rigidbody2D rb2;
     public bool movementOverride, canInteract;
     // Start is called before the first frame update
     void Start()
     {
+        walkingSpeed = baseWalkingSpeed;
+        runningSpeed = baseRunningSpeed;
+
+        walkSpeedBoostPerBoost = baseWalkingSpeed * 0.25f;
+        runSpeedBoostPerBoost = baseRunningSpeed * 0.25f;
+
         rb2 = GetComponent<Rigidbody2D>();
     }
 
@@ -73,5 +81,13 @@ public class player_running : MonoBehaviour
                 movementOverride = false;
             }
         }
+    }
+
+    public void RunWalkBoost()
+    {
+        walkSpeedBoosts++;
+        walkingSpeed = baseWalkingSpeed;
+        float boostQuantity = walkSpeedBoostPerBoost * walkSpeedBoosts;
+        walkingSpeed += boostQuantity;
     }
 }

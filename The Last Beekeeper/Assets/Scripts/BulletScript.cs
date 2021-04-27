@@ -22,9 +22,12 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            if (ppm)
+            if (ppm && collision.gameObject.GetComponent<Enemy_Health>())
             {
-                ppm.AddPoints(pointsPerEnemyBulletHit);
+                if (collision.gameObject.GetComponent<Enemy_Health>().canTakeBulletDamage)
+                {
+                    ppm.AddPoints(pointsPerEnemyBulletHit);
+                }
             }
 
             collision.gameObject.GetComponent<Enemy_Health>().TakeDamage(damageOutput, "Bullet", transform.position);
