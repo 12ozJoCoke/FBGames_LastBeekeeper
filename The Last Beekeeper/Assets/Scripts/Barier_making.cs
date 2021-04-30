@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Barier_making : MonoBehaviour
 {
-    public int BarrierAmount, MaxAmount;
+    public int BarrierAmount;
     public GameObject BarrierPre;
-    public int SpikeAmount, MaxSpikeAmount;
+    public int SpikeAmount;
     public GameObject MeleeSpike, RangeSpike, AllSpike;
     private GameObject Player;
     public bool CanPlace;
@@ -16,6 +16,7 @@ public class Barier_making : MonoBehaviour
     public Text text;
     void Start()
     {
+        ppm = GetComponent<Player_PointsManager>();
         Player = gameObject;
         CanPlace = true;
     }
@@ -23,15 +24,12 @@ public class Barier_making : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(BarrierAmount >= MaxAmount)
-        {
-            BarrierAmount = MaxAmount;
-        }
-        else if(BarrierAmount <= 0)
+       
+        if(BarrierAmount <= 0)
         {
             BarrierAmount = 0;
         }
-        text.text = BarrierAmount + "/" + MaxAmount + " :Barriers" + " " + SpikeAmount + "/" + MaxSpikeAmount + " :Spikes";
+        text.text = BarrierAmount + " :Barriers\r\n" + SpikeAmount + " :Spikes";
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (BarrierAmount > 0 && !!CanPlace)
@@ -51,11 +49,7 @@ public class Barier_making : MonoBehaviour
 
             
             }
-        if (SpikeAmount >= MaxSpikeAmount)
-        {
-            SpikeAmount = MaxSpikeAmount;
-        }
-        else if (SpikeAmount <= 0)
+        if (SpikeAmount <= 0)
         {
             SpikeAmount = 0;
         }
@@ -152,6 +146,7 @@ public class Barier_making : MonoBehaviour
             ppm.RemovePoints(pointsspend);
             BarrierAmount++;
         }
+       
     }
     public void BuySpike(int pointsspend)
     {
@@ -160,6 +155,7 @@ public class Barier_making : MonoBehaviour
             ppm.RemovePoints(pointsspend);
             SpikeAmount++;
         }
+        
     }
 
 }

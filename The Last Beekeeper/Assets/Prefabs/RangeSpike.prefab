@@ -99,12 +99,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageInt: 1
   timer: 0
-  damage: 20
+  damage: 30
   CanDoDamage: 1
   meleedmg: 0
   rangedmg: 1
   durabillity: 0
-  MaxDura: 25
+  MaxDura: 15
   usage: 1
 --- !u!61 &4337645569771228596
 BoxCollider2D:
