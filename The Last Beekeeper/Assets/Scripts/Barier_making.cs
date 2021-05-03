@@ -24,8 +24,8 @@ public class Barier_making : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if(BarrierAmount <= 0)
+
+        if (BarrierAmount <= 0)
         {
             BarrierAmount = 0;
         }
@@ -34,7 +34,10 @@ public class Barier_making : MonoBehaviour
         {
             if (BarrierAmount > 0 && !!CanPlace)
             {
-                Instantiate(BarrierPre, transform.position, Quaternion.identity);
+                Vector3 spawnPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                spawnPos.z = 0;
+
+                Instantiate(BarrierPre, spawnPos, Quaternion.identity);
 
                 BarrierAmount--;
             }
@@ -47,8 +50,8 @@ public class Barier_making : MonoBehaviour
                 Debug.Log("Ran out of barriers");
             }
 
-            
-            }
+
+        }
         if (SpikeAmount <= 0)
         {
             SpikeAmount = 0;
@@ -77,19 +80,28 @@ public class Barier_making : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (SpikeAmount > 0 && !!CanPlace)
+            if (SpikeAmount > 0 && CanPlace)
             {
                 if (MSpike)
                 {
-                    Instantiate(MeleeSpike, transform.position, Quaternion.identity);
+                    Vector3 spawnPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    spawnPos.z = 0;
+
+                    Instantiate(MeleeSpike, spawnPos, Quaternion.identity);
                 }
                 else if (RSpike)
                 {
-                    Instantiate(RangeSpike, transform.position, Quaternion.identity);
+                    Vector3 spawnPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    spawnPos.z = 0;
+
+                    Instantiate(RangeSpike, spawnPos, Quaternion.identity);
                 }
                 else if (AllSpike)
                 {
-                    Instantiate(AllSpike, transform.position, Quaternion.identity);
+                    Vector3 spawnPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    spawnPos.z = 0;
+
+                    Instantiate(AllSpike, spawnPos, Quaternion.identity);
                 }
 
                 SpikeAmount--;
@@ -103,41 +115,9 @@ public class Barier_making : MonoBehaviour
                 Debug.Log("Ran out of Spikes");
             }
         }
-            
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.tag == "NoBarrier")
-        {
-            CanPlace = false;
-        }
 
     }
-
-    void OnTriggerExit2D(Collider2D other2)
-    {
-        if (other2.gameObject.tag == "NoBarrier")
-        {
-            CanPlace = true;
-        }
-    }
-
-    void OnCollisionStay2D(Collision2D pbt)
-    {
-        if (pbt.gameObject.tag == "NoBarrier")
-        {
-            CanPlace = false;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D pbt2)
-    {
-        if (pbt2.gameObject.tag == "NoBarrier")
-        {
-            CanPlace = true;
-        }
-        
-    }
+    
 
     public void BuyBarrier(int pointsspend)
     {
@@ -146,7 +126,7 @@ public class Barier_making : MonoBehaviour
             ppm.RemovePoints(pointsspend);
             BarrierAmount++;
         }
-       
+
     }
     public void BuySpike(int pointsspend)
     {
@@ -155,7 +135,8 @@ public class Barier_making : MonoBehaviour
             ppm.RemovePoints(pointsspend);
             SpikeAmount++;
         }
-        
+
     }
 
+    
 }

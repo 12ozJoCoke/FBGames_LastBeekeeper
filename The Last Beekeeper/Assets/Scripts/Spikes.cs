@@ -25,13 +25,13 @@ public class Spikes : MonoBehaviour
         {
             if (timer <= damageInt)
             {
-                CanDoDamage = true;
+                
                 timer += Time.deltaTime;
             }
             else if (timer >= damageInt)
             {
                 timer = 0;
-                CanDoDamage = false;
+                CanDoDamage = true;
             }
         }
 
@@ -42,36 +42,36 @@ public class Spikes : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D enemy)
+    void OnTriggerStay2D(Collider2D enemy)
     {
         if(enemy.gameObject.tag == "Enemy")
         {
-           
+
             if (CanDoDamage)
             {
-                if(meleedmg && !rangedmg)
+                if (meleedmg && !rangedmg)
                 {
                     enemy.gameObject.GetComponent<Enemy_Health>().TakeDamage(damage, "Melee", transform.position);
                     CanDoDamage = false;
-                    durabillity --;
+                    durabillity--;
 
                 }
-                else if(!meleedmg && rangedmg)
+                else if (!meleedmg && rangedmg)
                 {
                     enemy.gameObject.GetComponent<Enemy_Health>().TakeDamage(damage, "Bullet", transform.position);
                     CanDoDamage = false;
-                    durabillity --;
+                    durabillity--;
                 }
-                else if(meleedmg && rangedmg)
+                else if (meleedmg && rangedmg)
                 {
                     enemy.gameObject.GetComponent<Enemy_Health>().TakeDamage(damage, "Bullet", transform.position);
                     enemy.gameObject.GetComponent<Enemy_Health>().TakeDamage(damage, "Melee", transform.position);
                     CanDoDamage = false;
-                    durabillity --;
+                    durabillity--;
                 }
-                
+
+
             }
-
         }
 
        

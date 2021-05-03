@@ -79,7 +79,8 @@ public class Player_health : MonoBehaviour
     {
         if(col.gameObject.tag == "AllSpike" && cantakedamage)
         {
-            health--;
+
+            health = health - 5;
             cantakedamage = false;
         }
     }
