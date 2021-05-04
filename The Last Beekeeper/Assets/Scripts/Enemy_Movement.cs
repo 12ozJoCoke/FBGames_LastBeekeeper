@@ -5,40 +5,46 @@ using UnityEngine;
 public class Enemy_Movement : MonoBehaviour
 {
     public GameObject player, target, hive;
+    public PauseManager pause_m;
     public float movementSpeed, timeBetweenChecks, checkTimer;
     Rigidbody2D rb2;
     // Start is called before the first frame update
     void Start()
     {
+        pause_m = GameObject.Find("Pause Manager").GetComponent<PauseManager>();
         rb2 = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (checkTimer < timeBetweenChecks)
+        if (!pause_m.IsPaused)
         {
-            checkTimer += Time.deltaTime;
-        }else if (checkTimer >= timeBetweenChecks)
-        {
-            checkTimer = 0;
-            CheckWhichTarget();
-        }
+            if (checkTimer < timeBetweenChecks)
+            {
+                checkTimer += Time.deltaTime;
+            }
+            else if (checkTimer >= timeBetweenChecks)
+            {
+                checkTimer = 0;
+                CheckWhichTarget();
+            }
 
-        Vector3 mov = Vector3.zero;
-        if (target != null)
-        {
-            Vector3 mousePos = target.transform.position;
-            mousePos.z = transform.position.z;
-            Vector3 mosPos = mousePos;
-            mosPos.x = mousePos.x - transform.position.x;
-            mosPos.y = mousePos.y - transform.position.y;
-            float angle = Mathf.Atan2(mosPos.y, mosPos.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+            Vector3 mov = Vector3.zero;
+            if (target != null)
+            {
+                Vector3 mousePos = target.transform.position;
+                mousePos.z = transform.position.z;
+                Vector3 mosPos = mousePos;
+                mosPos.x = mousePos.x - transform.position.x;
+                mosPos.y = mousePos.y - transform.position.y;
+                float angle = Mathf.Atan2(mosPos.y, mosPos.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
 
-            mov = transform.up * movementSpeed;
+                mov = transform.up * movementSpeed;
+            }
+            rb2.velocity = mov;
         }
-        rb2.velocity = mov;
     }
 
     void CheckWhichTarget()

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Shop_Manager : MonoBehaviour
 {
-    public int PointsForShootingTurret, PointsForMeleeTurret, PointsForBarrier, PointsForSpikes, PointsForWalkSpeedBoost;
+    public int PointsForShootingTurret, PointsForMeleeTurret, PointsForBarrier, PointsForSpikes, PointsForWalkSpeedBoost, speedBoostsAvailable;
     public Canvas ShopMenu;
     AllSpawners_Manager asm;
     Player_TurretConstruction ptc;
@@ -15,6 +15,7 @@ public class Shop_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speedBoostsAvailable = 5;
         ppm = GameObject.Find("Soldier").GetComponent<Player_PointsManager>();
         asm = GameObject.Find("Spawner_Axis").GetComponent<AllSpawners_Manager>();
         ptc = GameObject.Find("Soldier").GetComponent<Player_TurretConstruction>();
@@ -56,8 +57,9 @@ public class Shop_Manager : MonoBehaviour
 
     public void BuyWalkSpeedBoost()
     {
-        if (ppm.currentPoints >= PointsForWalkSpeedBoost)
+        if (ppm.currentPoints >= PointsForWalkSpeedBoost && speedBoostsAvailable >= 1)
         {
+            speedBoostsAvailable--;
             ppm.currentPoints -= PointsForWalkSpeedBoost;
             Playermove.RunWalkBoost();
         }
