@@ -1307,6 +1307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474751271}
   - component: {fileID: 1474751272}
+  - component: {fileID: 1474751273}
   m_Layer: 0
   m_Name: DifficultySelector
   m_TagString: Untagged
@@ -1366,6 +1367,23 @@ MonoBehaviour:
   - LetsGetEm
   - UltraViolence
   - LordOfTheWasps
+--- !u!114 &1474751273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474751270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094d6c2684fccd94793c09c5f0a85c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerHealth_Difficulties: 7d000000640000004b0000003200000019000000
+  HiveHealth_Difficulties: 960000007d000000640000004b00000032000000
+  EnemyInSceneCap_Difficulties: 050000000600000007000000080000000a000000
+  EnemyWaveCap_Difficulties: 0a0000000c0000000e0000001000000012000000
+  diffsel: {fileID: 0}
 --- !u!1 &1558973938
 GameObject:
   m_ObjectHideFlags: 0
