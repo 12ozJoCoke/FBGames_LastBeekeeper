@@ -54551,6 +54551,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!1 &7444717404128633776
 GameObject:
   m_ObjectHideFlags: 0
@@ -54840,6 +54841,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!1 &7444717404204299554
 GameObject:
   m_ObjectHideFlags: 0
@@ -55081,6 +55083,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!96 &7444717404222156991
 TrailRenderer:
   serializedVersion: 2
@@ -55473,6 +55476,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!222 &7444717404475861620
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56660,6 +56664,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!1 &7444717405112050348
 GameObject:
   m_ObjectHideFlags: 0
@@ -57158,6 +57163,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!1 &7444717405446643746
 GameObject:
   m_ObjectHideFlags: 0
@@ -57315,6 +57321,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!96 &7444717405471822249
 TrailRenderer:
   serializedVersion: 2
@@ -58447,6 +58454,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7444717405878931853}
+  pylons: []
 --- !u!1 &7444717406158935082
 GameObject:
   m_ObjectHideFlags: 0
@@ -58549,7 +58557,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
         type: 3}
+      propertyPath: OffWhenPaused.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
       propertyPath: OffWhenPaused.Array.data[0]
+      value: 
+      objectReference: {fileID: 7444717406002560162}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.data[1]
       value: 
       objectReference: {fileID: 7444717404131831424}
     m_RemovedComponents: []

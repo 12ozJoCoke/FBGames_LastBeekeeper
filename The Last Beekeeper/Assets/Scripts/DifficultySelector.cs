@@ -47,10 +47,10 @@ public class DifficultySelector : MonoBehaviour
 
         pressKeyBeginText.text = "Press " + "[" + boundStartKey + "]" + " to Begin!";
 
-        //if (Input.GetKeyDown(boundStartKey))
-        //{
-        //    LoadScene();
-        //}
+        if (Input.GetKeyDown(boundStartKey))
+        {
+            LoadScene();
+        }
     }
 
     public void nextDifficulty()

@@ -8,6 +8,7 @@ public class Enemy_Spawner : MonoBehaviour
     public GameObject enemyPrefab;
     public float timeBetweenSpawns;
     public AllSpawners_Manager manager;
+    public Enemy_PathfindingPylon[] pylons;
     float spawnTimer;
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class Enemy_Spawner : MonoBehaviour
         newEnemy.GetComponent<Enemy_Movement>().player = player;
         newEnemy.GetComponent<Enemy_Movement>().hive = hive;
         newEnemy.GetComponent<Enemy_Movement>().target = newEnemy.GetComponent<Enemy_Movement>().player;
+        newEnemy.GetComponent<Enemy_PathfindingManager>().pylons = pylons;
 
         if (randomProperty <= 50)
         {

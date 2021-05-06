@@ -223,6 +223,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &10295536
 TrailRenderer:
   serializedVersion: 2
@@ -431,6 +432,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &25861489
 TrailRenderer:
   serializedVersion: 2
@@ -639,6 +641,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &203394690
 TrailRenderer:
   serializedVersion: 2
@@ -1269,6 +1272,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &312298930
 TrailRenderer:
   serializedVersion: 2
@@ -2365,6 +2369,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.data[0]
+      value: 
+      objectReference: {fileID: 2142097772}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.data[1]
+      value: 
+      objectReference: {fileID: 204260174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2827f2523b7d71545b3d99efeb631662, type: 3}
 --- !u!1 &1050567214
@@ -2951,6 +2970,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &1250021222
 TrailRenderer:
   serializedVersion: 2
@@ -56222,6 +56242,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &1544436839
 TrailRenderer:
   serializedVersion: 2
@@ -56430,6 +56451,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &1586384368
 TrailRenderer:
   serializedVersion: 2
@@ -57068,6 +57090,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 1690975299}
+  pylons: []
 --- !u!96 &1964751336
 TrailRenderer:
   serializedVersion: 2

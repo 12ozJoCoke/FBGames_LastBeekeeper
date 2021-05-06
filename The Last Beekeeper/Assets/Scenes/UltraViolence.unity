@@ -53448,6 +53448,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.data[0]
+      value: 
+      objectReference: {fileID: 8600590137303002629}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.data[1]
+      value: 
+      objectReference: {fileID: 8600590135465966631}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2827f2523b7d71545b3d99efeb631662, type: 3}
 --- !u!1 &8600590135388217860
@@ -53658,6 +53673,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!4 &8600590135406143364
 Transform:
   m_ObjectHideFlags: 0
@@ -53709,6 +53725,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!212 &8600590135406143367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54073,6 +54090,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!212 &8600590135464964585
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54619,6 +54637,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!212 &8600590135641043673
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55967,6 +55986,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!212 &8600590136578699277
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56327,6 +56347,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!212 &8600590136781042311
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56692,6 +56713,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!4 &8600590136952718120
 Transform:
   m_ObjectHideFlags: 0
@@ -57065,6 +57087,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 8600590136952718122}
+  pylons: []
 --- !u!212 &8600590137192744591
 SpriteRenderer:
   m_ObjectHideFlags: 0

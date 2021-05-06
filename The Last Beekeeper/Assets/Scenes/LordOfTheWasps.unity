@@ -351,6 +351,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.data[0]
+      value: 
+      objectReference: {fileID: 7663285429937872926}
+    - target: {fileID: 8188352515554860446, guid: 2827f2523b7d71545b3d99efeb631662,
+        type: 3}
+      propertyPath: OffWhenPaused.Array.data[1]
+      value: 
+      objectReference: {fileID: 7663285430684398140}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2827f2523b7d71545b3d99efeb631662, type: 3}
 --- !u!1 &1208948409
@@ -53487,6 +53502,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!96 &7663285429344161045
 TrailRenderer:
   serializedVersion: 2
@@ -53833,6 +53849,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!1 &7663285429386099870
 GameObject:
   m_ObjectHideFlags: 0
@@ -54226,6 +54243,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!1 &7663285429609983902
 GameObject:
   m_ObjectHideFlags: 0
@@ -55087,6 +55105,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!1 &7663285430030813334
 GameObject:
   m_ObjectHideFlags: 0
@@ -55775,6 +55794,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!1 &7663285430526098652
 GameObject:
   m_ObjectHideFlags: 0
@@ -56276,6 +56296,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!222 &7663285430704651730
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56607,6 +56628,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!1 &7663285430760991134
 GameObject:
   m_ObjectHideFlags: 0
@@ -56658,6 +56680,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285430287617329}
+  pylons: []
 --- !u!96 &7663285430778391555
 TrailRenderer:
   serializedVersion: 2
