@@ -27,7 +27,7 @@ public class Enemy_Movement : MonoBehaviour
             else if (checkTimer >= timeBetweenChecks)
             {
                 checkTimer = 0;
-                CheckWhichTarget();
+                //CheckWhichTarget();
             }
 
             Vector3 mov = Vector3.zero;

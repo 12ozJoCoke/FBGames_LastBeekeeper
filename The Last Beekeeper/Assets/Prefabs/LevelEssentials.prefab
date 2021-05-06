@@ -547,6 +547,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285429428200969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1330,6 +1331,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285429671322937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1538,6 +1540,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285429712025302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1746,6 +1749,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285429730210647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2204,6 +2208,7 @@ MonoBehaviour:
     type: 3}
   meleeAttackPrefab: {fileID: 4770958937465669001, guid: 38dbe9449d894d44c87474a1e53dd19f,
     type: 3}
+  pause_m: {fileID: 0}
   meleeDamage: 20
   bulletDamage: 15
   pointsPerEnemyMeleeHit: 10
@@ -2298,11 +2303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BarrierAmount: 5
-  MaxAmount: 0
   BarrierPre: {fileID: 4742334615330875729, guid: 1b1e81bc33030ef4a95b7c57e8cee9a8,
     type: 3}
   SpikeAmount: 10
-  MaxSpikeAmount: 0
   MeleeSpike: {fileID: 4803453819852861122, guid: b82965122108f9d4dbdb157f0aa626ae,
     type: 3}
   RangeSpike: {fileID: 4337645569771228597, guid: 1a2f1e6d57de8de47b790a5e9b262324,
@@ -2721,6 +2724,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285430433719895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2929,6 +2933,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285430475675612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3215,6 +3220,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285430634292445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4120,6 +4126,7 @@ GameObject:
   - component: {fileID: 7663285431070447531}
   - component: {fileID: 7663285431070447533}
   - component: {fileID: 7663285431070447532}
+  - component: {fileID: 1128416258958595442}
   m_Layer: 0
   m_Name: The Hive
   m_TagString: Untagged
@@ -4240,6 +4247,19 @@ MonoBehaviour:
   cantakedamage: 0
   initcolor: {r: 0, g: 0, b: 0, a: 0}
   endcolor: {r: 1, g: 0.24071746, b: 0.18431371, a: 0.69803923}
+--- !u!114 &1128416258958595442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663285431070447528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ca2b76bb943654e8a082649f192539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next: {fileID: 0}
 --- !u!1 &7663285431081301770
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,6 +4385,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
+  pylons: []
 --- !u!212 &7663285431130673759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4570,6 +4591,7 @@ MonoBehaviour:
   PointsForBarrier: 0
   PointsForSpikes: 0
   PointsForWalkSpeedBoost: 200
+  speedBoostsAvailable: 0
   ShopMenu: {fileID: 7663285430951754453}
 --- !u!1 &7663285431402354681
 GameObject:

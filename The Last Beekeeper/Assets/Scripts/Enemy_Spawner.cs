@@ -38,6 +38,7 @@ public class Enemy_Spawner : MonoBehaviour
         newEnemy.GetComponent<Enemy_Movement>().hive = hive;
         newEnemy.GetComponent<Enemy_Movement>().target = newEnemy.GetComponent<Enemy_Movement>().player;
         newEnemy.GetComponent<Enemy_PathfindingManager>().pylons = pylons;
+        newEnemy.GetComponent<Enemy_PathfindingManager>().specialpylon = hive.GetComponent<Enemy_PathfindingPylon>();
 
         if (randomProperty <= 50)
         {

@@ -13,7 +13,11 @@ public class Enemy_Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (used_healthbar == null)
+        {
+            SpawnHealthBar(gameObject.name);
+        }
+
         dead = false;
         currentHealth = maxHealth;
     }
