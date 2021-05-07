@@ -133018,6 +133018,31 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &869659934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7663285431149019439, guid: f7bae4a629315224088440a02fa4e0ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1807173873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &869659936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869659934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70deb403f5b45fb47832551f87384bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointsForShootingTurret: 150
+  PointsForMeleeTurret: 150
+  PointsForBarrier: 100
+  PointsForSpikes: 100
+  PointsForWalkSpeedBoost: 200
+  speedBoostsAvailable: 5
+  ShopMenu: {fileID: 1511775043}
 --- !u!1 &912193207
 GameObject:
   m_ObjectHideFlags: 0
@@ -133306,6 +133331,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next: {fileID: 1807173875}
+--- !u!223 &1511775043 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7663285430951754453, guid: f7bae4a629315224088440a02fa4e0ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1807173873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584984288
 GameObject:
   m_ObjectHideFlags: 0
@@ -133401,6 +133432,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1489679053502678669, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 869659936}
+    - target: {fileID: 1489679053502678669, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuySpike
+      objectReference: {fileID: 0}
     - target: {fileID: 7663285429428200968, guid: f7bae4a629315224088440a02fa4e0ae,
         type: 3}
       propertyPath: pylons.Array.size
@@ -133581,6 +133622,16 @@ PrefabInstance:
       propertyPath: pylons.Array.data[7]
       value: 
       objectReference: {fileID: 1869354665}
+    - target: {fileID: 7663285429897890185, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 869659936}
+    - target: {fileID: 7663285429897890185, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyShooter
+      objectReference: {fileID: 0}
     - target: {fileID: 7663285429909674884, guid: f7bae4a629315224088440a02fa4e0ae,
         type: 3}
       propertyPath: baseRunningSpeed
@@ -133616,6 +133667,21 @@ PrefabInstance:
       propertyPath: camerashake
       value: 
       objectReference: {fileID: 564895471}
+    - target: {fileID: 7663285430160772072, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 869659936}
+    - target: {fileID: 7663285430160772072, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyWalkSpeedBoost
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663285430306108186, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 7663285430433719894, guid: f7bae4a629315224088440a02fa4e0ae,
         type: 3}
       propertyPath: pylons.Array.size
@@ -133811,6 +133877,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEssentials
       objectReference: {fileID: 0}
+    - target: {fileID: 7663285430757695948, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 869659936}
+    - target: {fileID: 7663285430757695948, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBrawler
+      objectReference: {fileID: 0}
     - target: {fileID: 7663285431130673758, guid: f7bae4a629315224088440a02fa4e0ae,
         type: 3}
       propertyPath: pylons.Array.size
@@ -133856,7 +133932,33 @@ PrefabInstance:
       propertyPath: pylons.Array.data[7]
       value: 
       objectReference: {fileID: 1869354665}
-    m_RemovedComponents: []
+    - target: {fileID: 7663285431149019425, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: PointsForBarrier
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663285431149019425, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: PointsForSpikes
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663285431149019425, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: speedBoostsAvailable
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399591362837882036, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 869659936}
+    - target: {fileID: 8399591362837882036, guid: f7bae4a629315224088440a02fa4e0ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBarrier
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5285807070761657319, guid: f7bae4a629315224088440a02fa4e0ae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7bae4a629315224088440a02fa4e0ae, type: 3}
 --- !u!4 &1807173874 stripped
 Transform:

@@ -223,7 +223,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 16
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5285807070761657319}
         m_MethodName: BuyBarrier
         m_Mode: 1
         m_Arguments:
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5285807070761657319}
         m_MethodName: BuySpike
         m_Mode: 1
         m_Arguments:
@@ -2026,7 +2026,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7663285431149019425}
+      - m_Target: {fileID: 5285807070761657319}
         m_MethodName: BuyShooter
         m_Mode: 1
         m_Arguments:
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7663285431149019425}
+      - m_Target: {fileID: 5285807070761657319}
         m_MethodName: BuyWalkSpeedBoost
         m_Mode: 1
         m_Arguments:
@@ -3763,7 +3763,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7663285431149019425}
+      - m_Target: {fileID: 5285807070761657319}
         m_MethodName: BuyBrawler
         m_Mode: 1
         m_Arguments:
@@ -4552,7 +4552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7663285431149019438}
-  - component: {fileID: 7663285431149019425}
+  - component: {fileID: 5285807070761657319}
   m_Layer: 0
   m_Name: ShopManager
   m_TagString: Untagged
@@ -4574,7 +4574,7 @@ Transform:
   m_Father: {fileID: 7663285430741497172}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7663285431149019425
+--- !u!114 &5285807070761657319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4588,10 +4588,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointsForShootingTurret: 150
   PointsForMeleeTurret: 150
-  PointsForBarrier: 0
-  PointsForSpikes: 0
+  PointsForBarrier: 100
+  PointsForSpikes: 100
   PointsForWalkSpeedBoost: 200
-  speedBoostsAvailable: 0
+  speedBoostsAvailable: 5
   ShopMenu: {fileID: 7663285430951754453}
 --- !u!1 &7663285431402354681
 GameObject:
