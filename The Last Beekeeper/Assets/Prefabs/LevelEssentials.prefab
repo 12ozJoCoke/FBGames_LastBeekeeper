@@ -355,7 +355,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5285807070761657319}
+      - m_Target: {fileID: 869659936}
         m_MethodName: BuyBarrier
         m_Mode: 1
         m_Arguments:
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5285807070761657319}
+      - m_Target: {fileID: 869659936}
         m_MethodName: BuySpike
         m_Mode: 1
         m_Arguments:
@@ -547,7 +547,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285429428200969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1331,7 +1339,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285429671322937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1540,7 +1556,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285429712025302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1749,7 +1773,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285429730210647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2026,7 +2058,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5285807070761657319}
+      - m_Target: {fileID: 869659936}
         m_MethodName: BuyShooter
         m_Mode: 1
         m_Arguments:
@@ -2070,7 +2102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7663285429909674883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -1.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7663285430748113301}
@@ -2140,10 +2172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3804c5593b5baa4cb30461e2f43cbb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 5
-  runningSpeed: 8
-  baseRunningSpeed: 0
-  baseWalkingSpeed: 0
+  walkingSpeed: 0
+  runningSpeed: 0
+  baseRunningSpeed: 8
+  baseWalkingSpeed: 5
   walkSpeedBoosts: 0
   runSpeedBoosts: 0
   movementOverride: 0
@@ -2510,7 +2542,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5285807070761657319}
+      - m_Target: {fileID: 869659936}
         m_MethodName: BuyWalkSpeedBoost
         m_Mode: 1
         m_Arguments:
@@ -2629,7 +2661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125, y: -29.999939}
+  m_AnchoredPosition: {x: 125, y: -30}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7663285430306108188
@@ -2724,7 +2756,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285430433719895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2933,7 +2973,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285430475675612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3220,7 +3268,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285430634292445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3763,7 +3819,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5285807070761657319}
+      - m_Target: {fileID: 869659936}
         m_MethodName: BuyBrawler
         m_Mode: 1
         m_Arguments:
@@ -4385,7 +4441,15 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons: []
+  pylons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &7663285431130673759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4552,7 +4616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7663285431149019438}
-  - component: {fileID: 5285807070761657319}
+  - component: {fileID: 869659936}
   m_Layer: 0
   m_Name: ShopManager
   m_TagString: Untagged
@@ -4574,7 +4638,7 @@ Transform:
   m_Father: {fileID: 7663285430741497172}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5285807070761657319
+--- !u!114 &869659936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
