@@ -20,10 +20,10 @@ public class DifficultySettingForLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(diffsel.boundStartKey))
-        //{
-        //    LoadLevel("LevelMakin");
-        //}
+        if (Input.GetKeyDown(diffsel.boundStartKey))
+        {
+            LoadLevel("LevelMakin");
+        }
 
         if (!hasProcessedSceneAddons)
         {

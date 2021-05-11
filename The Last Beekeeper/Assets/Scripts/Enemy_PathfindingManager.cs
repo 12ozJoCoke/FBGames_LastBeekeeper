@@ -79,8 +79,8 @@ public class Enemy_PathfindingManager : MonoBehaviour
         {
             if (pylons[pylonref].next != null)
             {
-                em.target = pylons[pylonref].next.gameObject;
-                pylonref = Array.IndexOf(pylons, pylons[pylonref].next);
+                pylons[pylonref].CallNext(em);
+                pylonref = Array.IndexOf(pylons, em.target.GetComponent<Enemy_PathfindingPylon>());
             }
         }
     }
