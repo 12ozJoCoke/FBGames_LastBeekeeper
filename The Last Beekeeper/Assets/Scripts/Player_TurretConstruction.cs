@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player_TurretConstruction : MonoBehaviour
 {
+    public bool CanBuild;
     public GameObject shootingTurretPrefab, meleeTurretPrefab;
     public int shootingTurretsOnHand, meleeTurretsOnHand;
     AllSpawners_Manager asm;
@@ -14,6 +15,7 @@ public class Player_TurretConstruction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CanBuild = true;
         asm = GameObject.Find("Spawner_Axis").GetComponent<AllSpawners_Manager>();
         ppm = GetComponent<Player_PointsManager>();
     }
@@ -21,7 +23,7 @@ public class Player_TurretConstruction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && CanBuild)
         {
             if (Input.GetKey(KeyCode.LeftControl))
             {
