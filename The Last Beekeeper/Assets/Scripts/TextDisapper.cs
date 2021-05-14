@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class TextDisapper : MonoBehaviour
 {
-    public Text text;
+    public GameObject text;
 
     public float timer;
     public float timetoexit;
     void Start()
     {
+        text.SetActive(true);
         timer = 0;
     }
 
@@ -19,12 +20,12 @@ public class TextDisapper : MonoBehaviour
     {
         if(timer <= timetoexit)
         {
-            
+            timer += Time.deltaTime;
         }
 
         else if(timer >= timetoexit)
         {
-            
+            text.SetActive(false);
         }
     }
 }
