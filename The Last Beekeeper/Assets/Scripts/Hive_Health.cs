@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Hive_Health : MonoBehaviour
 {
@@ -57,6 +58,11 @@ public class Hive_Health : MonoBehaviour
                 cantakedamage = true;
             }
         }
+
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene("DifficultySelect");
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -67,4 +73,6 @@ public class Hive_Health : MonoBehaviour
             cantakedamage = false;
         }
     }
+
+    
 }

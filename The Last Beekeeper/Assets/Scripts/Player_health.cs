@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_health : MonoBehaviour
 {
@@ -62,6 +63,11 @@ public class Player_health : MonoBehaviour
                 cantakedamage = true;
             }
         }
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("DifficultySelect");
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -85,5 +91,5 @@ public class Player_health : MonoBehaviour
         }
     }
 
-
+    
 }

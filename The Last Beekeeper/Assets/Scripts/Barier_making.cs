@@ -57,21 +57,21 @@ public class Barier_making : MonoBehaviour
             SpikeAmount = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             MSpike = true;
             RSpike = false;
             ASpike = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             MSpike = false;
             RSpike = true;
             ASpike = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             MSpike = false;
             RSpike = false;
