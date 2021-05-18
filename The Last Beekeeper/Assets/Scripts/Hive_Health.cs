@@ -13,6 +13,7 @@ public class Hive_Health : MonoBehaviour
     public float hittimer, timebetweenhits;
     public bool cantakedamage;
     public Color initcolor, endcolor;
+    public EndConditionManager ecm;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +62,8 @@ public class Hive_Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            SceneManager.LoadScene("DifficultySelect");
+            currentHealth = 0;
+            ecm.triggerLoss("letting the Hive die.");
         }
     }
 

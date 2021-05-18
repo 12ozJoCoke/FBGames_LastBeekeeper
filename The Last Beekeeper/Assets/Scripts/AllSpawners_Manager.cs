@@ -8,10 +8,11 @@ public class AllSpawners_Manager : MonoBehaviour
     public GameObject player;
     public List<Enemy_Health> allEnemies;
     public List<Enemy_Spawner> allSpawners;
-    public int maxEnemiesInScene, waveNumber, enemiesPerWave, spawnedEnemiesInWave;
+    public int maxEnemiesInScene, waveNumber, maxWaves, enemiesPerWave, spawnedEnemiesInWave;
     public Text waveCounter_UI;
     public Color defaultTextColor, waveReadyTextColor;
     public bool canSpawn, proceedWave, completedWave;
+    public EndConditionManager ecm;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,11 @@ public class AllSpawners_Manager : MonoBehaviour
         }
 
         waveCounter_UI.text = "Wave " + waveNumber;
+
+        if (waveNumber == maxWaves && completedWave)
+        {
+            ecm.triggerWin("completing and surviving all " + maxWaves + " waves.");
+        }
     }
 
     public void AddEnemy(Enemy_Health enemy)

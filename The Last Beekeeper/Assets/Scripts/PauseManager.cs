@@ -6,10 +6,12 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public List<Canvas> OnWhenPaused, OffWhenPaused;
-    public bool IsPaused;
+    public Canvas victoryScreenCanvas, shopCanvas;
+    public bool IsPaused, CanToggle;
     // Start is called before the first frame update
     void Start()
     {
+        CanToggle = true;
         IsPaused = false;
 
         foreach (Canvas thing in OnWhenPaused)
@@ -25,7 +27,7 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && CanToggle)
         {
             TogglePause();
         }
@@ -44,6 +46,25 @@ public class PauseManager : MonoBehaviour
         foreach (Canvas thing2 in OffWhenPaused)
         {
             thing2.gameObject.SetActive(!IsPaused);
+        }
+    }
+
+    public void permaPause()
+    {
+        CanToggle = false;
+        IsPaused = true;
+        Time.timeScale = 0;
+        Debug.Log("Time Scale: " + Time.timeScale);
+        victoryScreenCanvas.gameObject.SetActive(true);
+        shopCanvas.gameObject.SetActive(false);
+
+        foreach (Canvas thing in OnWhenPaused)
+        {
+            thing.gameObject.SetActive(false);
+        }
+        foreach (Canvas thing2 in OffWhenPaused)
+        {
+            thing2.gameObject.SetActive(false);
         }
     }
 }

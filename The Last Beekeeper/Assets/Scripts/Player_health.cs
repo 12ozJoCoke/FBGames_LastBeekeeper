@@ -17,6 +17,8 @@ public class Player_health : MonoBehaviour
     bool cantakedamage, touchingenemy;
 
     public Animator camerashake;
+
+    public EndConditionManager ecm;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +68,8 @@ public class Player_health : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("DifficultySelect");
+            health = 0;
+            ecm.triggerLoss("dying.");
         }
     }
 

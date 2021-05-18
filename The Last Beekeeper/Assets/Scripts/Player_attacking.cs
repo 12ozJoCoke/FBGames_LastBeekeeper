@@ -159,7 +159,11 @@ public class Player_attacking : MonoBehaviour
 
     void Attack(float range)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + (transform.up * bullet_spawn_forwardoffset), transform.up);
+        //RaycastHit2D hit = Physics2D.BoxCast(transform.position + (transform.up * bullet_spawn_forwardoffset), new Vector2(1,1), 0, transform.up, range);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, range);
+
+        //GameObject newbullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.up * range, transform.rotation);
+
 
         if (hit.collider != null)
         {
