@@ -1144,15 +1144,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285429428200969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1783,15 +1775,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285429671322937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2000,15 +1984,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285429712025302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2217,15 +2193,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285429730210647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2636,6 +2604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082cd8c6a5cc78244ad4c014afcd257a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanBuild: 0
   shootingTurretPrefab: {fileID: 7428421289661052037, guid: 00b8a161a55cffb41aae35a1211729cd,
     type: 3}
   meleeTurretPrefab: {fileID: 1685178772944858992, guid: 3470fb5463c07824e8159b0b45c9620d,
@@ -2751,6 +2720,7 @@ MonoBehaviour:
   healthbarPrefab: {fileID: 2127219988734549413, guid: bbb2c57ae3dcf0741999b3b3cbdee2cc,
     type: 3}
   camerashake: {fileID: 0}
+  ecm: {fileID: 0}
 --- !u!114 &7663285429909675003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2779,7 +2749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BarrierAmount: 5
-  BarrierPre: {fileID: 4742334615330875729, guid: 1b1e81bc33030ef4a95b7c57e8cee9a8,
+  BarrierPre: {fileID: 2018403740643039482, guid: b1f198cbd666ec34cbce4a5e70519af9,
     type: 3}
   SpikeAmount: 10
   MeleeSpike: {fileID: 4803453819852861122, guid: b82965122108f9d4dbdb157f0aa626ae,
@@ -3200,15 +3170,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285430433719895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3417,15 +3379,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285430475675612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3634,15 +3588,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285430634292445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4519,6 +4465,7 @@ MonoBehaviour:
   cantakedamage: 0
   initcolor: {r: 0, g: 0, b: 0, a: 0}
   endcolor: {r: 1, g: 0.24071746, b: 0.18431371, a: 0.69803923}
+  ecm: {fileID: 0}
 --- !u!114 &1128416258958595442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4532,6 +4479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next: {fileID: 0}
+  next2: {fileID: 0}
 --- !u!114 &7948890910646211567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4670,15 +4618,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 7.5
   manager: {fileID: 7663285431402354682}
-  pylons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  grabber: {fileID: 0}
 --- !u!212 &7663285431130673759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4970,6 +4910,7 @@ MonoBehaviour:
   - {fileID: 7663285430475675615}
   maxEnemiesInScene: 5
   waveNumber: 0
+  maxWaves: 0
   enemiesPerWave: 10
   spawnedEnemiesInWave: 0
   waveCounter_UI: {fileID: 7663285430306108189}
@@ -4978,6 +4919,7 @@ MonoBehaviour:
   canSpawn: 0
   proceedWave: 0
   completedWave: 0
+  ecm: {fileID: 0}
 --- !u!1 &8898288735946423971
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: 2031e74c9cb014a4bbe3893d8d0e54bb
+  - enabled: 1
     path: Assets/Scenes/DifficultySelect.unity
     guid: cdad0d09fb2c0684e8e77a271a53fd27
   - enabled: 1
@@ -26,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelMakin.unity
     guid: b97f77d8431e73140a0a0ea1681f52f1
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ee24f8fed37f5474889c11186301fe49
   m_configObjects: {}

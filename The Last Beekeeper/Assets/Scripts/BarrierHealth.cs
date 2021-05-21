@@ -8,13 +8,18 @@ public class BarrierHealth : MonoBehaviour
     public float nodamage, timeyboi;
     public int BarrierHp, maxHP;
     public bool youstilltakeadamage;
-
+    private GameObject Player;
+    
     
     
     void Start()
     {
         BarrierHp = maxHP;
         youstilltakeadamage = true;
+
+        Player = GameObject.FindWithTag("Player");
+
+
     }
 
     // Update is called once per frame
@@ -42,6 +47,7 @@ public class BarrierHealth : MonoBehaviour
                 
             }
     }
+    
     
    
     private void OnCollisionStay2D(Collision2D other)

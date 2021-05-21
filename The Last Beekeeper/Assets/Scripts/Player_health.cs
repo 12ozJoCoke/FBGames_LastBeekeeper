@@ -53,6 +53,12 @@ public class Player_health : MonoBehaviour
             healthBar_text.text = "Player: " + health + " / " + maxhealth;
         }
 
+        if (health <= 0)
+        {
+            health = 0;
+            ecm.triggerLoss("dying.");
+        }
+
         //Everything else please send help
         if (!cantakedamage)
         {
@@ -66,11 +72,7 @@ public class Player_health : MonoBehaviour
             }
         }
 
-        if (health <= 0)
-        {
-            health = 0;
-            ecm.triggerLoss("dying.");
-        }
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)

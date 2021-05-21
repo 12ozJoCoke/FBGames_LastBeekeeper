@@ -36,8 +36,9 @@ public class Barier_making : MonoBehaviour
             {
                 Vector3 spawnPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 spawnPos.z = 0;
+               
 
-                Instantiate(BarrierPre, spawnPos, Quaternion.identity);
+                Instantiate(BarrierPre, spawnPos, Player.transform.rotation);
 
                 BarrierAmount--;
             }
