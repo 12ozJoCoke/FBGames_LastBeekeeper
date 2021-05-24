@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Shop_Manager : MonoBehaviour
 {
-    public int PointsForShootingTurret, PointsForMeleeTurret, PointsForBarrier, PointsForSpikes, PointsForWalkSpeedBoost, speedBoostsAvailable;
+    public int PointsForShootingTurret, PointsForMeleeTurret, PointsForBarrier, PointsForSpikes, PointsForHeals, PointsForWalkSpeedBoost, speedBoostsAvailable;
     public Canvas ShopMenu;
     AllSpawners_Manager asm;
     Player_TurretConstruction ptc;
     Barier_making bm;
     player_running Playermove;
     Player_PointsManager ppm;
+    Healing h;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,10 @@ public class Shop_Manager : MonoBehaviour
         bm.BuySpike(PointsForSpikes);
     }
 
+    public void BuyHeals()
+    {
+        h.BuyHealth(PointsForHeals);
+    }
     public void BuyWalkSpeedBoost()
     {
         if (ppm.currentPoints >= PointsForWalkSpeedBoost && speedBoostsAvailable >= 1)
