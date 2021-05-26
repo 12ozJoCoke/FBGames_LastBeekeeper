@@ -5,17 +5,20 @@ using UnityEngine.UI;
 
 public class PageFlip : MonoBehaviour
 {
-    public GameObject Image1;
-    public GameObject Image2;
+    public List<GameObject> images;
     public Canvas Can;
     public bool SlideChange;
+    int ActivePage;
 
     // Start is called before the first frame update
     void Start()
     {
-        Image1.active = true;
-        Image2.active = false;
-        Can.enabled = false;
+        ActivePage = 0;
+        foreach (GameObject page in images)
+        {
+            page.SetActive(false);
+        }
+        images[ActivePage].SetActive(true);
         SlideChange = false;
 
     }
@@ -25,27 +28,13 @@ public class PageFlip : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (!SlideChange)
+            images[ActivePage].SetActive(false);
+            ActivePage++;
+            if (ActivePage > (images.Count - 1))
             {
-                SlideChange = true;
+                ActivePage = 0;
             }
-            else
-            {
-                SlideChange = false;
-            }
-        }
-
-        if (SlideChange)
-        {
-            Image1.active = false;
-            Image2.active = true;
-            Can.enabled = true;
-        }
-        else
-        {
-            Image1.active = true;
-            Image2.active = false;
-            Can.enabled = false;
+            images[ActivePage].SetActive(true);
         }
     }
 }
