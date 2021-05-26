@@ -128,6 +128,8 @@ MonoBehaviour:
     type: 3}
   goopPrefab: {fileID: 3669328040993215172, guid: a137f369a596ced44987e9b769976658,
     type: 3}
+  MeleeDamage: {fileID: 21300000, guid: 1e4937f62f101f440a3cef4a26a3e0a4, type: 3}
+  BooletDamage: {fileID: 21300000, guid: b647d8a792fc0934f9f05ceaddcb3485, type: 3}
   player: {fileID: 0}
   healthbar_offset: 0.75
   maxHealth: 50

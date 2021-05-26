@@ -42,12 +42,15 @@ public class Enemy_Spawner : MonoBehaviour
 
         if (randomProperty <= 50)
         {
-            newEnemy.GetComponent<Enemy_Health>().canTakeBulletDamage = true;
+            Enemy_Health newenemy = newEnemy.GetComponent<Enemy_Health>();
+            newenemy.canTakeBulletDamage = true;
+            newenemy.GetComponent<SpriteRenderer>().sprite = newenemy.BooletDamage;
         }
         else if (randomProperty > 50)
         {
-            newEnemy.GetComponent<Enemy_Health>().canTakeBulletDamage = false;
-            newEnemy.GetComponent<SpriteRenderer>().color = Color.red;
+            Enemy_Health newenemy = newEnemy.GetComponent<Enemy_Health>();
+            newenemy.canTakeBulletDamage = false;
+            newenemy.GetComponent<SpriteRenderer>().sprite = newenemy.MeleeDamage;
         }
 
         manager.AddEnemy(newEnemy.GetComponent<Enemy_Health>());

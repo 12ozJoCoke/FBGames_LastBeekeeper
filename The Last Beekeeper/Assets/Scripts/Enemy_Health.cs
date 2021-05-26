@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy_Health : MonoBehaviour
 {
     public GameObject healthbarPrefab, goopPrefab;
+    public Sprite MeleeDamage, BooletDamage;
     public Player_attacking player;
     public float healthbar_offset;
     public int maxHealth, currentHealth;
