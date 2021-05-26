@@ -45,7 +45,7 @@ public class DifficultySelector : MonoBehaviour
             }
         }
 
-        pressKeyBeginText.text = "Press " + "[" + boundStartKey + "]" + " to Begin!";
+        pressKeyBeginText.text = "Press " + "[" + boundStartKey + "]" + " to enter the Dying Hive!";
 
         //if (Input.GetKeyDown(boundStartKey))
         //{
